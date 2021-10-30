@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+*{
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.cv{
+    height: 100vh;
+    background-color: #ff7f50;
+}
+
+nav{
+    width: 100%;
+    height:60px;
+    background-color: #fff;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    margin-left: 30px;
+
+    cursor: pointer;
+}
+
+.logo h2{
+    font-family: 'Lobster', cursive;
+    color: #ff7f50;
+}
+
+.logo p{
+    font-family: 'Kanit', sans-serif;
+    font-size: 12px;
+
+    margin-top: -3px;
+}
+
+nav ul{
+    margin-right: 30px;
+}
+
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+
+    margin: 0 15px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #000;
+    font-size: 15px;
+    /* text-shadow: 1px 1px 5px #000; */
+    text-transform: uppercase;
+    /* font-weight: bold; */
+    letter-spacing: 2px;
+}
+
+nav ul li a:hover{
+    color: #ff7f50;
+}
+
+.contact{
+    background-color: #ff7f50;
+    color: #fff;
+    border-radius: 5px;
+
+    padding: 5px 10px;
+}
+
+.contact:hover{
+    color: #000;
+}
+
+.content{
+    display: flex;
+    justify-content: space-around;
+
+    margin: 150px 30px 0 30px;
+}
+
+.content h1{
+    color: #fff;
+    /* text-shadow: 2px 2px 5px #000; */
+    text-transform: uppercase;
+}
+
+.content p{
+    font-family: 'Oswald', sans-serif;;
+    color: #222;
+
+    margin-top: 15px;
+}
+
+.content a{
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 3px;
+    /* border: 2px solid #222; */
+
+    margin-top: 15px;
+    padding: 10px 20px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition: 0.3s;
+
+    transition-delay: 0.4s;
+}
+
+.content a::before{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #111;
+
+    position: absolute;
+    top: 0;
+    left: -100%;
+
+    transition: all 0.2s;
+}
+
+.content a::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #111;
+
+    position: absolute;
+    bottom: 0;
+    left: 100%;
+
+    transition: all 0.2s;
+
+    transition-delay: 0.3s;
+}
+
+.content span::before{
+    content:'';
+    width: 2px;
+    height: 100%;
+    background-color: #111;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    transition: all 0.2s;
+
+    transition-delay: 0.4s;
+}
+
+.content span::after{
+    content: '';
+    width: 2px;
+    height: 100%;
+    background-color: #111;
+
+    position: absolute;
+    top: -100%;
+    right: 0;
+
+    transition: all 0.2s;
+
+    transition-delay: 0.1s;
+}
+
+.content a:hover::before,
+.content a:hover::after{
+    left: 0;
+}
+
+.content a:hover span::before,
+.content a:hover span::after{
+    top: 0;
+}
+
+.content a:hover{
+    background-color: #222;
+    color: #ff7f50;
+}
+
+.content a:active{
+    transform: scale(0.8);
+}
+
+.contentd i{
+    font-size: 30px;
+    margin-right: 3px;
+}
+
+.img{
+    width: 600px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.img div{
+    width: 140px;
+    height: 250px;
+    border-radius: 5px;
+
+    overflow: hidden;
+
+    cursor: pointer;
+}
+
+.img div img{
+    height: 100%;
+}
+
+.img2 img{
+    margin-left: -10px;
+}
+
+.img1,.img3{
+    transform: translateY(-30px);
+
+    animation-name: myani;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+
+.img2,.img4{
+    transform: translateY(-5px);
+
+    animation: myani2 2s linear infinite alternate;
+}
+
+.img3 img{
+    margin-left: -20px;
+}
+
+@keyframes myani{
+    from{
+        transform: translateY(-30px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
+
+@keyframes myani2{
+    from{
+        transform: translateY(-5px);
+    }
+    to{
+        transform: translateY(-30px);
+    }
+}
